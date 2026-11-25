@@ -7,4 +7,4 @@ if [ -z "${USERNAME:-}" ] || [ -z "${PASSWORD:-}" ]; then
 fi
 mkdir -p /work
 cd /work
-exec ttyd --writable --port "${PORT:-7681}" --credential "$USERNAME:$PASSWORD" bash -l
+exec /usr/local/bin/ttyd --writable --port "${PORT:-7681}" --credential "$USERNAME:$PASSWORD" bash -l
